@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requisição de Montagem de Móveis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Requisição de Montagem de Móveis</h1>
+
+  <div class="form-group">
+    <label for="nome">Nome do Cliente:</label>
+    <input type="text" id="nome" placeholder="Insira o nome do cliente">
+  </div>
+
+  <div class="form-group">
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" placeholder="Insira o endereço">
+  </div>
+
+  <div class="form-group">
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" placeholder="Insira o telefone">
+  </div>
+
+  <div class="form-group">
+    <label for="codigoCliente">Código do Cliente:</label>
+    <input type="text" id="codigoCliente" placeholder="Insira o código do cliente">
+  </div>
+
+  <div class="form-group">
+    <label for="numeroNF">Número NF:</label>
+    <input type="text" id="numeroNF" placeholder="Insira o número da NF">
+  </div>
+
+  <div class="form-group">
+    <label for="dataVenda">Data da Venda:</label>
+    <input type="date" id="dataVenda">
+  </div>
+
+  <div class="form-group">
+    <label for="dataEntrega">Data de Entrega:</label>
+    <input type="date" id="dataEntrega">
+  </div>
+
+  <h2>Adicionar Produto</h2>
+
+  <div class="form-group">
+    <label for="codigoProduto">Código do Produto:</label>
+    <input type="text" id="codigoProduto" placeholder="Insira o código do produto">
+  </div>
+
+  <div class="form-group">
+    <label for="descricaoProduto">Descrição do Produto:</label>
+    <input type="text" id="descricaoProduto" placeholder="Insira a descrição do produto">
+  </div>
+
+  <div class="form-group">
+    <label for="quantidadeProduto">Quantidade:</label>
+    <input type="number" id="quantidadeProduto" placeholder="Insira a quantidade">
+  </div>
+
+  <div class="form-group">
+    <label for="valorProduto">Valor Unitário:</label>
+    <input type="number" id="valorProduto" step="0.01" placeholder="Insira o valor unitário">
+  </div>
+
+  <button onclick="adicionarProduto()">Adicionar Produto</button>
+
+  <h2>Produtos Adicionados</h2>
+
+  <table id="tabelaProdutos">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Descrição</th>
+        <th>Quantidade</th>
+        <th>Valor Unitário</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h3>Total: R$ <span id="valorTotal">0.00</span></h3>
+
+  <button onclick="gerarPDF()">Gerar PDF</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
